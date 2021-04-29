@@ -1,12 +1,10 @@
 (ns com.github.dbasner.fastest-clicker.views
   (:require
    [re-frame.core :as re-frame]
-   [com.github.dbasner.fastest-clicker.subs :as subs]))
+   [com.github.dbasner.fastest-clicker.subs :as subs]
+   [com.github.dbasner.fastest-clicker.components.button :refer [ButtonHolder]]))
 
 
 (defn main-panel []
-  (let [name (re-frame/subscribe [::subs/name])]
     [:div
-     [:h1
-      "Hello from " @name]]))
-
+     [ButtonHolder]])
